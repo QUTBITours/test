@@ -1,0 +1,291 @@
+/* Form components */
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-group label {
+  display: block;
+  font-weight: var(--font-medium);
+  margin-bottom: var(--space-2);
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-secondary);
+  transition: border-color var(--transition-fast) ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+.form-group input::placeholder {
+  color: var(--color-gray-400);
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  font-weight: var(--font-medium);
+  text-align: center;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast) ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-gray-300);
+}
+
+.btn-accent {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn-accent:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+.btn-danger {
+  background-color: var(--color-error);
+  color: var(--color-white);
+}
+
+.btn-danger:hover {
+  background-color: var(--color-error-dark);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Sections */
+.selection-section,
+.reservations-section,
+.quran-status-section,
+.completion-section,
+.admin-section {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+}
+
+/* Quran status components */
+.quran-status-section {
+  text-align: center;
+  position: relative;
+}
+
+.quran-round-badge {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  width: 0;
+  transition: width var(--transition-normal) ease;
+}
+
+.status-text {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+}
+
+/* Sipara grid */
+.sipara-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.sipara-card {
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  text-align: center;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-fast) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sipara-card.selected {
+  border-color: var(--color-primary);
+  background-color: rgba(15, 118, 110, 0.05);
+}
+
+.sipara-number {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.sipara-name {
+  font-family: var(--font-family-arabic);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.sipara-reader {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
+  word-break: break-word;
+}
+
+.sipara-empty {
+  color: var(--color-gray-400);
+  font-style: italic;
+}
+
+/* Completion section */
+.completion-message {
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+}
+
+.completion-message h2 {
+  color: var(--color-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.completion-message p {
+  margin-bottom: var(--space-6);
+}
+
+/* Admin section */
+.admin-controls {
+  text-align: center;
+  padding: var(--space-4);
+  border-top: 1px dashed var(--border-medium);
+  margin-top: var(--space-4);
+}
+
+.admin-note {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  margin-top: var(--space-2);
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: var(--space-4);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-50);
+  max-width: 300px;
+  animation: fadeInOut var(--transition-slow) ease;
+}
+
+/* Confirmation dialog */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-40);
+}
+
+.confirmation-dialog {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  max-width: 400px;
+  width: 90%;
+  box-shadow: var(--shadow-lg);
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+/* Animations */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-normal) ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,102 @@
+/* Responsive styles */
+
+/* Small devices (phones, up to 640px) */
+@media (max-width: 640px) {
+  .app-container {
+    padding: var(--space-2);
+  }
+  
+  h1 {
+    font-size: var(--text-2xl);
+  }
+  
+  h2 {
+    font-size: var(--text-xl);
+  }
+  
+  .bismillah-img {
+    max-width: 180px;
+  }
+  
+  .selection-section,
+  .reservations-section,
+  .quran-status-section,
+  .completion-section,
+  .admin-section {
+    padding: var(--space-4);
+  }
+  
+  .sipara-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .confirmation-dialog {
+    width: 95%;
+    padding: var(--space-4);
+  }
+  
+  .btn {
+    padding: var(--space-2) var(--space-4);
+  }
+}
+
+/* Medium devices (tablets, 641px to 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
+  .sipara-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large devices (laptops/desktops, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sipara-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Extra large devices (large desktops, 1025px and up) */
+@media (min-width: 1025px) {
+  .app-container {
+    padding: var(--space-6) var(--space-8);
+  }
+  
+  .sipara-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .selection-form-container {
+    display: flex;
+    gap: var(--space-4);
+  }
+  
+  .selection-form-container .form-group {
+    flex: 1;
+  }
+}
+
+/* Print styles */
+@media print {
+  .app-container {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .selection-section,
+  .admin-section,
+  .btn {
+    display: none !important;
+  }
+  
+  .app-main {
+    gap: var(--space-4);
+  }
+  
+  .sipara-grid {
+    break-inside: avoid;
+  }
+  
+  .sipara-card {
+    border: 1px solid var(--border-medium);
+    page-break-inside: avoid;
+  }
+}

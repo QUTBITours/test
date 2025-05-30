@@ -1,0 +1,121 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-family-primary);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--leading-tight);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-4);
+}
+
+h1 {
+  font-size: var(--text-3xl);
+  color: var(--color-primary-dark);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+}
+
+h3 {
+  font-size: var(--text-xl);
+}
+
+p {
+  margin-bottom: var(--space-4);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast) ease;
+}
+
+a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-family-primary);
+}
+
+input, select, button {
+  font-size: var(--text-base);
+}
+
+/* App layout */
+.app-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+/* Header styles */
+.app-header {
+  text-align: center;
+  padding: var(--space-6) 0;
+  margin-bottom: var(--space-6);
+  border-bottom: 2px solid var(--color-primary-light);
+  position: relative;
+}
+
+.bismillah-container {
+  margin-bottom: var(--space-4);
+}
+
+.bismillah-img {
+  max-width: 240px;
+  height: auto;
+}
+
+/* Footer styles */
+.app-footer {
+  margin-top: auto;
+  text-align: center;
+  padding: var(--space-6) 0 var(--space-2);
+  color: var(--text-tertiary);
+  font-size: var(--text-sm);
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: var(--space-4);
+}
+
+.mb-4 {
+  margin-bottom: var(--space-4);
+}

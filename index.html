@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khatmul Quran Nasik</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="bismillah-container">
+        <img src="assets/bismillah.png" alt="Bismillah" class="bismillah-img">
+      </div>
+      <h1>Khatmal Quran Group</h1>
+    </header>
+    
+    <main class="app-main">
+      <section class="quran-status-section">
+        <div class="quran-round-badge" id="quranRoundBadge">
+          First Quran
+        </div>
+        <div class="form-group">
+          <select id="quranRoundSelect" class="form-select">
+            <!-- Options will be populated dynamically -->
+          </select>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="status-text" id="statusText">
+          <span id="completedCount">0</span>/<span id="reservedCount">0</span> Siparas Selected
+        </div>
+      </section>
+
+      <section class="selection-section" id="selectionSection">
+        <h2>Reserve a Sipara</h2>
+        <form id="reservationForm">
+          <div class="form-group">
+            <label for="userName">Your Name</label>
+            <input type="text" id="userName" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="siparaSelect">Select Sipara</label>
+            <select id="siparaSelect" required>
+              <option value="" disabled selected>Choose a Sipara</option>
+              <!-- Siparas will be added dynamically -->
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" id="reserveBtn">Reserve Sipara</button>
+        </form>
+      </section>
+
+      <section class="completion-section hidden" id="completionSection">
+        <div class="completion-message">
+          <h2 id="completionTitle">Quran Completed!</h2>
+          <p id="completionText">All 30 Siparas have been reserved and read. Jazak'Allah Khair to all participants.</p>
+          <button class="btn btn-accent" id="startNewQuranBtn">Start New Quran</button>
+        </div>
+      </section>
+
+      <section class="reservations-section">
+        <h2>Reserved Siparas</h2>
+        <div class="sipara-grid" id="siparaGrid">
+          <!-- Sipara cards will be added dynamically -->
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <div class="admin-controls hidden" id="adminControls">
+          <button class="btn btn-danger" id="resetBtn">Reset All Data</button>
+          <p class="admin-note">This will clear all reservations and reset the Quran counter.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>Khatmal Quran Group &copy; <span id="currentYear"></span></p>
+    </footer>
+  </div>
+
+  <!-- Notification component for feedback -->
+  <div class="notification hidden" id="notification">
+    <p id="notificationText"></p>
+  </div>
+
+  <!-- Confirmation dialog -->
+  <div class="overlay hidden" id="confirmationOverlay">
+    <div class="confirmation-dialog">
+      <h3 id="confirmationTitle">Confirm Action</h3>
+      <p id="confirmationText">Are you sure you want to proceed?</p>
+      <div class="confirmation-buttons">
+        <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+        <button class="btn btn-danger" id="confirmBtn">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
